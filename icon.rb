@@ -33,6 +33,7 @@ class Icon
   private
 
   def gravatar_id(name)
+    name = name.gsub(/\W/, "")  # Avoid injections.
     url = "https://api.github.com/users/#{name}?access_token=#{GITHUB_TOKEN}"
     json = open(url, "User-Agent" => USER_AGENT).read
     data = JSON.parse(json)
