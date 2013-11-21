@@ -22,7 +22,7 @@ class Icon
       "l_gravatar:#{gravatar_id name}.jpg,g_north_west,x_#{x},y_#{y}/"
     }
 
-    "http://res.cloudinary.com/pairicon/image/upload/c_scale,w_140,h_140,g_center/" +
+    "http://res.cloudinary.com/pairicon/image/upload/c_scale,w_1,h_1,g_center/" +
       gravatars.join + "white_ywdcmp.png"
   end
 
