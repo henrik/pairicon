@@ -11,7 +11,7 @@ MAX = 4
 
 get "/" do
   @title = TITLE
-  @names = params[:name].reject(&:empty?).first(MAX)
+  @names = Array(params[:name]).reject(&:empty?).first(MAX)
   @url = Icon.new(*@names).url
   slim :index
 end
