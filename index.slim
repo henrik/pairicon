@@ -10,11 +10,15 @@ html
         font-family: 'Open Sans', sans-serif;
       }
 
-      hgroup { margin-bottom: 30px; }
+      hgroup { margin-bottom: 40px; }
       h1 { margin: 0; }
       hgroup p { margin-top: 0; }
 
-      h2 { margin-top: 30px; }
+      h2 { margin-top: 40px; }
+
+      footer {
+        margin-top: 40px;
+      }
 
   body
     hgroup
@@ -39,3 +43,12 @@ html
           input name="name[]" value=@names[i-1] autofocus=(i==1)
 
       p: button Get avatar
+
+    footer
+      p
+        ' Mostly powered by
+        a href="http://cloudinary.com" Cloudinary
+        ' .
+
+        a href="https://github.com/henrik/pairicon" View source on GitHub
+        ' .
