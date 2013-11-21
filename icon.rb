@@ -5,14 +5,25 @@ class Icon
   USER_AGENT = "pairicon.herokuapp.com"
   GITHUB_TOKEN = ENV["GITHUB_TOKEN"]
 
+  POSITIONS = {
+    2 => [[0, 0], [60, 60]],
+    3 => [[0, 0], [80, 0], [40, 80]],
+    4 => [[0, 0], [80, 0], [0, 80], [80, 80]]
+  }
+
   def initialize(*names)
     @names = names
   end
 
   def url
-    gid1 = gravatar_id(@names[0])
-    gid2 = gravatar_id(@names[1])
-    "http://res.cloudinary.com/pairicon/image/upload/c_scale,w_140,h_140,g_center/l_gravatar:#{gid1}.jpg,g_north_west,x_0,y_0/l_gravatar:#{gid2}.jpg,g_north_west,x_60,y_60/github_egc4ey.png"
+    positions = POSITIONS[@names.length]
+
+    gravatars = @names.zip(positions).map { |name, (x, y)|
+      "l_gravatar:#{gravatar_id name}.jpg,g_north_west,x_#{x},y_#{y}/"
+    }
+
+    "http://res.cloudinary.com/pairicon/image/upload/c_scale,w_140,h_140,g_center/" +
+      gravatars.join + "white_ywdcmp.png"
   end
 
   private
