@@ -1,6 +1,6 @@
 # Pairicon
 
-Web app to get a combined avatar for e.g. pair programming commits:
+Web app to get a combined avatar for pair programming commits:
 
 <http://pairicon.herokuapp.com>
 
