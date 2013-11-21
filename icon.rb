@@ -2,6 +2,9 @@ require "open-uri"
 require "json"
 
 class Icon
+  USER_AGENT = "pairicon.herokuapp.com"
+  GITHUB_TOKEN = ENV["GITHUB_TOKEN"]
+
   def initialize(*names)
     @names = names
   end
@@ -15,7 +18,10 @@ class Icon
   private
 
   def gravatar_id(name)
-    JSON.parse(open("https://api.github.com/users/#{name}").read)["gravatar_id"]
+    url = "https://api.github.com/users/#{name}?access_token=#{GITHUB_TOKEN}"
+    json = open(url, "User-Agent" => USER_AGENT).read
+    data = JSON.parse(json)
+    data["gravatar_id"]
   rescue OpenURI::HTTPError => e
     if e.message.include?("404 Not Found")
       "fakehash"

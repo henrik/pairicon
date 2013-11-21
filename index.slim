@@ -2,8 +2,23 @@ doctype html
 html
   head
     title= @title
+    link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css"
+    css:
+      body {
+        margin: 0;
+        padding: 30px;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      hgroup { margin-bottom: 30px; }
+      h1 { margin: 0; }
+      hgroup p { margin-top: 0; }
+
   body
-    h1= @title
+    hgroup
+      h1= @title
+      p By <a href="http://henrik.nyh.se">Henrik Nyh</a>.
+
     p Enter 2–4 GitHub usernames to get a combined avatar for e.g. pair programming commits.
 
     - case @names.length

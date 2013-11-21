@@ -12,6 +12,6 @@ MAX = 4
 get "/" do
   @title = TITLE
   @names = Array(params[:name]).reject(&:empty?).first(MAX)
-  @url = Icon.new(*@names).url
+  @url = Icon.new(*@names).url if @names.any?
   slim :index
 end

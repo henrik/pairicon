@@ -1,27 +1,26 @@
-# Etsy search RSS feeds
+# Pairicon
 
-Ruby script that provides Atom (RSS, kind of) feeds from Etsy searches:
+Web app to get a combined avatar for e.g. pair programming commits:
 
-<http://etsy.nyh.name>
+<http://pairicon.herokuapp.com>
 
-Sinatra app using Nokogiri and Builder, deployed to Heroku.
+Sinatra on Heroku.
 
 
-## Setup
+## Dev
 
-If you want to set up a new instance on Heroku for some reason, it goes something like this:
+Start the server with a GitHub API token like:
 
-* Clone this repo.
-* `heroku create some-name`
-* `heroku addons:add memcachier  # free`
-* `git push heroku`
+`GITHUB_TOKEN=abc123 rackup`
+
+Get a token [here](https://github.com/settings/applications).
 
 
 ## Credits and license
 
 By [Henrik Nyh](http://henrik.nyh.se/) under the MIT license:
 
->  Copyright (c) 2012 Henrik Nyh
+>  Copyright (c) 2013 Henrik Nyh
 >
 >  Permission is hereby granted, free of charge, to any person obtaining a copy
 >  of this software and associated documentation files (the "Software"), to deal
