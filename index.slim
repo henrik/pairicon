@@ -4,4 +4,19 @@ html
     title= @title
   body
     h1= @title
-    p Hello!
+    p Enter 2–4 GitHub usernames to get a combined avatar for e.g. pair programming commits.
+
+    - case @names.length
+    - when 1
+      p Moar!
+    - when 2..4
+      p: img src=@url
+      p: input value=@url size=100
+
+    form
+      - 1.upto(4) do |i|
+        p: label
+          ' User #{i}:
+          input name="name[]" value=@names[i-1]
+
+      p: button Get avatar
