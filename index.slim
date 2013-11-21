@@ -27,6 +27,11 @@ html
 
     p Enter 2–4 GitHub usernames to get a combined avatar for e.g. pair programming commits.
 
+    p
+      ' Use the form or provide them in the URL, e.g.
+      a href="/henrik+joakimk": code= "http://#{request.host_with_port}/henrik+joakimk"
+      ' .
+
     - case @names.length
     - when 1
       p Moar!
