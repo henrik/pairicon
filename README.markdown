@@ -4,16 +4,16 @@ Web app to get a combined avatar for pair programming commits:
 
 <http://pairicon.herokuapp.com>
 
-Sinatra on Heroku.
+Sinatra on Heroku using a lot of Cloudinary.
 
 
 ## Dev
 
-Start the server with a GitHub API token like:
+Start the server with a GitHub API token and [Cloudinary](cloudinary.com) details like:
 
-`GITHUB_TOKEN=abc123 rackup`
+`GITHUB_TOKEN=abc123 CLOUDINARY_API_KEY=xx CLOUDINARY_API_SECRET=yy CLOUDINARY_CLOUD_NAME=zz rackup`
 
-Get a token [here](https://github.com/settings/applications).
+Get a GitHub token [here](https://github.com/settings/applications). Get the Cloudinary info in their settings. Or use `heroku config` to list them, if you have access.
 
 
 ## Credits and license
