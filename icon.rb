@@ -52,7 +52,7 @@ class Icon
       # TODO: Store upload times in e.g. Redis, set these to false sometimes, for speed.
       invalidate: true,  # Invalidate on CDN.
       overwrite: true,   # If same public_id exists.
-      **CLOUDINARY_AUTH
+      **CLOUDINARY_AUTH,
     )
 
     # Should be same as `name`, but this helps validate that upload succeeded.
