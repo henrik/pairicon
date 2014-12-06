@@ -15,12 +15,12 @@ class Icon
   EMPTY_IMAGE_ID = "_pairicon_empty"
 
   # FIXME: Can there be non-square icons? Probably look bad.
-  # FIXME: Bigger than 80 plz?
-  SIDE = 80
+  SIDE = 150
+  SIDE_WITH_OVERLAP = (SIDE * 0.8).round
   POSITIONS = {
-    2 => [[0, 0], [60, 60]],
-    3 => [[0, 0], [80, 0], [40, 80]],
-    4 => [[0, 0], [80, 0], [0, 80], [80, 80]]
+    2 => [[0, 0], [SIDE_WITH_OVERLAP, SIDE_WITH_OVERLAP]],
+    3 => [[0, 0], [SIDE, 0], [(SIDE/2), SIDE]],
+    4 => [[0, 0], [SIDE, 0], [0, SIDE], [SIDE, SIDE]]
   }
 
   def initialize(*names)
