@@ -2,7 +2,7 @@
 
 Web app to get a combined avatar for pair programming commits:
 
-<http://pairicon.herokuapp.com>
+<http://pairicon.nyh.name>
 
 Sinatra on Heroku using a lot of Cloudinary.
 
