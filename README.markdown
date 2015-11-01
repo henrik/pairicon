@@ -9,11 +9,29 @@ Sinatra on Heroku using a lot of Cloudinary.
 
 ## Dev
 
-Start the server with a GitHub API token and [Cloudinary](cloudinary.com) details like:
+Start the server with a GitHub API token and [Cloudinary](cloudinary.com) details.
 
-`GITHUB_TOKEN=abc123 CLOUDINARY_API_KEY=xx CLOUDINARY_API_SECRET=yy CLOUDINARY_CLOUD_NAME=zz rackup`
+### If you have access to a configured Heroku:
 
-Get a GitHub token [here](https://github.com/settings/applications). Get the Cloudinary info in their settings. Or use `heroku config` to list them, if you have access.
+    gem install heroku  # If needed.
+    export $(heroku config --shell)
+    rackup
+
+View it:
+
+    open http://localhost:9292/
+
+### Without Heroku access:
+
+    * Get a GitHub token [here](https://github.com/settings/applications).
+    * Get the Cloudinary info in their settings.
+    * Start the server:
+
+    GITHUB_TOKEN=abc123 CLOUDINARY_API_KEY=xx CLOUDINARY_API_SECRET=yy CLOUDINARY_CLOUD_NAME=zz rackup
+
+    * View it:
+
+    open http://localhost:9292/
 
 
 ## Credits and license
