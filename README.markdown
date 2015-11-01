@@ -17,9 +17,7 @@ Start the server with a GitHub API token and [Cloudinary](cloudinary.com) detail
     export $(heroku config --shell)
     rackup
 
-View it:
-
-    open http://localhost:9292/
+View it: <http://localhost:9292/>
 
 ### Without Heroku access:
 
@@ -30,9 +28,7 @@ Start the server:
 
     GITHUB_TOKEN=abc123 CLOUDINARY_API_KEY=xx CLOUDINARY_API_SECRET=yy CLOUDINARY_CLOUD_NAME=zz rackup
 
-View it:
-
-    open http://localhost:9292/
+View it: <http://localhost:9292/>
 
 
 ## Credits and license
