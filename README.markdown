@@ -25,11 +25,12 @@ View it:
 
 * Get a GitHub token [here](https://github.com/settings/applications).
 * Get the Cloudinary info in their settings.
-* Start the server:
+
+Start the server:
 
     GITHUB_TOKEN=abc123 CLOUDINARY_API_KEY=xx CLOUDINARY_API_SECRET=yy CLOUDINARY_CLOUD_NAME=zz rackup
 
-* View it:
+View it:
 
     open http://localhost:9292/
 
