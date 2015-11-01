@@ -41,7 +41,7 @@ class Icon
   private
 
   def avatar_id(name)
-    name = name.gsub(/\W/, "")  # Avoid injections.
+    name = name.gsub(/[^\w-]/, "")  # Avoid injections.
     url = "https://api.github.com/users/#{name}?access_token=#{GITHUB_TOKEN}"
     json = open(url, "User-Agent" => USER_AGENT).read
     data = JSON.parse(json)
